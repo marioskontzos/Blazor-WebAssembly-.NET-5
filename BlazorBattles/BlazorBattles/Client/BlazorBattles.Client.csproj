@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\Icons\archer.png" />
-    <None Include="wwwroot\Icons\axe.png" />
-    <None Include="wwwroot\Icons\banana.png" />
-    <None Include="wwwroot\Icons\knight.png" />
-    <None Include="wwwroot\Icons\mage.png" />
+    <None Include="wwwroot\icons\archer.png" />
+    <None Include="wwwroot\icons\axe.png" />
+    <None Include="wwwroot\icons\banana.png" />
+    <None Include="wwwroot\icons\knight.png" />
+    <None Include="wwwroot\icons\mage.png" />
   </ItemGroup>
 
   <ItemGroup>
