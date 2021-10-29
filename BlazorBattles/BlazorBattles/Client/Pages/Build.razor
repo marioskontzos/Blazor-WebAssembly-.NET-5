@@ -2,6 +2,7 @@
 @inject IBananaService BananaService
 @inject IUnitService UnitService
 @inject IToastService ToastService
+@attribute [Authorize]
 
 <h3>Build</h3>
 
@@ -9,7 +10,7 @@
     <select @bind="selectedUnitId" class="form-control">
         @foreach (var unit in UnitService.Units)
         {
-            <option value="@unit.Id">@unit.Id // @unit.BananaCost Bananas </option>
+            <option value="@unit.Id">@unit.Title // @unit.BananaCost Bananas </option>
         }
     </select>
 </div>
