@@ -1,4 +1,5 @@
-﻿using BlazorBattles.Shared.Models;
+﻿using BlazorBattles.Shared;
+using BlazorBattles.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,6 @@ namespace BlazorBattles.Server.Data
       }
 
       public DbSet<Unit> Units { get; set; }
+      public DbSet<User> Users { get; set; }
    }
 }
