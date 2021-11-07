@@ -1,4 +1,5 @@
-﻿using BlazorBattles.Shared.Models;
+﻿using BlazorBattles.Shared;
+using BlazorBattles.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
