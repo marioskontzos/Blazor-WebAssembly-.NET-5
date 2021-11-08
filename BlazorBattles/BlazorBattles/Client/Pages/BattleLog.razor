@@ -1,0 +1,10 @@
+﻿@page "/battlelog"
+
+<h3>Battle Log</h3>
+
+<ul class="list-group">
+    @foreach (var round in BattleService.LastBattle.Log)
+    {
+        <li class="@GetClass(round)">@round</li>
+    }
+</ul>
