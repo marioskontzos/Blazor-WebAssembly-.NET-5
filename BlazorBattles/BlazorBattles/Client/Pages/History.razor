@@ -1,5 +1,4 @@
 ﻿@page "/history"
-@inject IBattleService BattleService
 
 <h3>History</h3>
 
@@ -28,18 +27,3 @@
 	}
     </tbody>
 </table>
-
-@code {    
-   protected override async void OnInitialized()
-   {
-       await BattleService.GetHistory();
-    }
-
-   string GetHistoryStyle(BattleHistoryEntry entry)
-   {
-       if (entry.YouWon)
-           return "color: green; font-weight: 600;";
-       else
-           return string.Empty;
-   }
-}

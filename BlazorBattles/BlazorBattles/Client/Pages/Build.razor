@@ -1,13 +1,9 @@
 ﻿@page "/build"
-@inject IBananaService BananaService
-@inject IUnitService UnitService
-@inject IToastService ToastService
-@attribute [Authorize]
 
 <h3>Build</h3>
 
 <div class="form-group">
-    <select @bind="selectedUnitId" class="form-control">
+    <select @bind="SelectedUnitId" class="form-control">
         @foreach (var unit in UnitService.Units)
         {
             <option value="@unit.Id">@unit.Title // @unit.BananaCost Bananas </option>
@@ -16,18 +12,3 @@
 </div>
 
 <button class="btn btn-primary" @onclick="BuildUnit">Build</button>
-
-@code {
-   int selectedUnitId = 1;
-   bool needMoreBananas = false;
-
-   protected override async Task OnInitializedAsync()
-   {
-       await UnitService.LoadUnitsAsync();
-   }
-
-   public async Task BuildUnit()
-   {
-       await UnitService.AddUnit(selectedUnitId);
-   }
-}

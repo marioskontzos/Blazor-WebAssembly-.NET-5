@@ -1,7 +1,4 @@
 ﻿@page "/army"
-@inject IUnitService UnitServise
-@attribute [Authorize]
-
 <h3>My Army</h3>
 
 @if (UnitServise.Units.Count > 0)
@@ -34,17 +31,4 @@
 else
 {
 <span>Loading units...</span>
-}
-
-@code {
-   protected override async Task OnInitializedAsync()
-   {
-       await UnitServise.LoadUnitsAsync();
-       await UnitServise.LoadUserUnitsAsync();
-   }
-
-   private async Task ReviveArmy()
-   {
-       await UnitServise.ReviveArmy();
-   }
 }
